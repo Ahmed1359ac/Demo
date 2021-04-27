@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZAP_VIM_Report.controller.V_Input"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Invoice Search">
+				<VBox class="sapUiSmallMargin">
+				<Input id="IP_XBLNR" width="50%" placeholder="Enter Reference Number...." class="sapUiSmallMarginBottom"></Input>
+				<Button text="Get Invoice Details" width="150px" id="B_GET" press="GetInvoice"/>
+				</VBox>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

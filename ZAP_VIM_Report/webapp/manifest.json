@@ -1,0 +1,153 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "ZAP_VIM_Report",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZGW_VIM_APP2_SRV": {
+				"uri": "/sap/opu/odata/sap/ZGW_VIM_APP2_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZGW_VIM_APP2_SRV/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "ZAP_VIM_Report.view.V_Root",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ZAP_VIM_Report.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"viewPath": "ZAP_VIM_Report.view",
+				"controlId": "V_Main",
+				"viewLevel": 1,
+				"controlAggregation": "pages",
+				"routerClass": "sap.m.routing.Router"
+			},
+			"targets": {
+				"Target_Input": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "V_Input",
+					"viewId": "1"
+				},
+				"Target_Output": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "V_Output",
+					"viewId": "2"
+				},
+				"Target_Detail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "V_Detail",
+					"viewId": "3"
+				}
+			},
+			"routes": [
+				{
+					"name": "Route_Input",
+					"pattern": "",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Target_Input"
+					]
+				},
+				{
+					"name": "Route_Output",
+					"pattern": "{ip_xblnr}",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Target_Output"
+					]
+				},
+				{
+					"name": "Route_Detail",
+					"pattern": "Route_Detail/{p_belnr}/{p_bukrs}/{p_gjahr}",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Target_Detail"
+					]
+				}
+			]
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zvimreport/webapp",
+		"_version": "1.1.0"
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

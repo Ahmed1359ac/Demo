@@ -1,0 +1,63 @@
+{
+    "resources": [
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "Component-changes.json"
+        },
+        {
+            "name": "view/V_Output.view.xml"
+        },
+        {
+            "name": "view/V_Input.view.xml"
+        },
+        {
+            "name": "view/V_Root.view.xml"
+        },
+        {
+            "name": "view/V_Detail.view.xml"
+        },
+        {
+            "name": "controller/V_Input.controller.js"
+        },
+        {
+            "name": "controller/V_Detail.controller.js"
+        },
+        {
+            "name": "controller/V_Output.controller.js"
+        },
+        {
+            "name": "controller/V_Root.controller.js"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/ZGW_VIM_APP2_SRV/metadata.xml"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

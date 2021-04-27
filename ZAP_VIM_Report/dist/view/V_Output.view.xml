@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="ZAP_VIM_Report.controller.V_Output">
+	<App>
+		<pages>
+			<Page title="Invoice Summary" showNavButton="true" navButtonPress="NavToInputView">
+				<content>
+					<!--<List noDataText="Drop list items here" id="list" items="{/DocDetailSet}" itemPress="NavToDetailView">-->
+					<List noDataText="No data found" id="list" items="{/DocDetailSet}">
+						<items>
+							<StandardListItem type="Navigation" title="Invoice No: {Belnr}  Status: {Stat}" description="CCode: {Bukrs}, Year: {Gjahr}, Ref No: {Xblnr}"
+								press="NavToDetailView"/></items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
